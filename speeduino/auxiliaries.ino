@@ -26,11 +26,6 @@ void initialiseFan()
   fan_pin_mask = digitalPinToBitMask(pinFan);
 }
 
-void initialiseMPFI()
-{
-  digitalWrite(pinMPFI, HIGH);         //Initiallise program with the MPFI in the on state
-}
-
 void fanControl()
 {
   if( configPage6.fanEnable == 1 )

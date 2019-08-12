@@ -11,7 +11,6 @@ void vvtControl();
 void initialiseFan();
 void nitrousControl();
 void fanControl();
-void initialiseMPFI();
 
 #define BOOST_PIN_LOW()  *boost_pin_port &= ~(boost_pin_mask)
 #define BOOST_PIN_HIGH() *boost_pin_port |= (boost_pin_mask)

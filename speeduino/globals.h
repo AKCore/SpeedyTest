@@ -987,7 +987,6 @@ byte pinIgnBypass; //The pin used for an ignition bypass (Optional)
 byte pinFlex; //Pin with the flex sensor attached
 byte pinBaro; //Pin that an external barometric pressure sensor is attached to (If used)
 byte pinResetControl; // Output pin used control resetting the Arduino
-byte pinMPFI; //DSM Bullshit
 
 // global variables // from speeduino.ino
 extern struct statuses currentStatus; // from speeduino.ino

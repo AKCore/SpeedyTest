@@ -184,7 +184,6 @@ void initialiseAll()
     //Perform all initialisations
     initialiseSchedulers();
     //initialiseDisplay();
-    initialiseMPFI();
     initialiseIdle();
     initialiseFan();
     initialiseAuxPWM();
@@ -1328,7 +1327,7 @@ void setPinMapping(byte boardID)
       pinIdle1 = 9; //Single wire idle control
       pinIdle2 = 10; //2 wire idle control
       pinFuelPump = 23; //Fuel pump output
-      pinVVT_1 = 50; //Default VVT output
+      pinVVT_1 = 11; //Default VVT output
       pinStepperDir = 32; //Direction pin  for DRV8825 driver
       pinStepperStep = 31; //Step pin for DRV8825 driver
       pinStepperEnable = 30; //Enable pin for DRV8825 driver
@@ -1339,8 +1338,6 @@ void setPinMapping(byte boardID)
       pinSpareLOut4 = 29; //low current output spare4
       pinFan = 24; //Pin for the fan output
       pinResetControl = 46; //Reset control output PLACEHOLDER value for now
-      pinMPFI = 11; //Default VVT output
-
     #endif
       break;
 
@@ -1542,7 +1539,6 @@ void setPinMapping(byte boardID)
   pinMode(pinStepperEnable, OUTPUT);
   pinMode(pinBoost, OUTPUT);
   pinMode(pinVVT_1, OUTPUT);
-  pinMode(pinMPFI, OUTPUT);
 
   inj1_pin_port = portOutputRegister(digitalPinToPort(pinInjector1));
   inj1_pin_mask = digitalPinToBitMask(pinInjector1);
